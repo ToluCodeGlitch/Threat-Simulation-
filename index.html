@@ -1,25 +1,24 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta charset="UTF-8">
   <title>Threat Simulation Game</title>
-  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <header>
-    <img src="stack-logo.png" alt="STACK LIMITED Logo" class="logo"/>
-    <h1>STACK LIMITED - Cybersecurity Threat Simulator</h1>
+  <div id="particles-js"></div>
+  <header class="logo">
+    <img src="logo.png" alt="STACK LIMITED Logo">
   </header>
-
-  <main class="intro-screen">
-    <section class="mission-briefing">
-      <h2>Mission Briefing</h2>
-      <p>You are a junior Cybersecurity Analyst at STACK LIMITED. Your mission is to detect, analyze, and respond to a series of real-world cyber threats. Make your choices wisely — the safety of the company depends on you.</p>
-      <button onclick="startSimulation()">Begin Simulation</button>
-    </section>
+  <main class="container">
+    <h1>STACK LIMITED THREAT SIMULATOR</h1>
+    <p>Train like a real Cybersecurity Analyst. Respond to threats. Make decisions. Save the network.</p>
+    <button onclick="startSimulation()">Begin Simulation</button>
   </main>
-
   <script src="script.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/particles.js"></script>
+  <script>
+    particlesJS.load('particles-js', 'particles.json');
+  </script>
 </body>
 </html>
