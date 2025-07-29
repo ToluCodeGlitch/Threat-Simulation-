@@ -1,32 +1,18 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Scenario 3 - Insider Threat</title>
   <link rel="stylesheet" href="style.css" />
 </head>
-<body>
-  <header>
-    <img src="stack-logo.png" alt="STACK LIMITED Logo" class="logo" />
-    <h1>Scenario 3: Insider Threat</h1>
-  </header>
-
-  <main>
-    <section>
-      <p>A former employee still has access to internal systems. You find out they’ve been logging in remotely. What’s your immediate response?</p>
-
-      <button onclick="handleDecision('Revoke access and notify leadership', 10)">Revoke Access</button>
-      <button onclick="handleDecision('Monitor silently for more evidence', 0)">Just Monitor</button>
-    </section>
-  </main>
-
+<body class="military-theme">
+  <div class="scenario">
+    <h2>Scenario 3: Insider Threat</h2>
+    <p>Logs show repeated access to sensitive files by an employee outside their scope.</p>
+    <p>Choose your action:</p>
+    <button onclick="choose('Flag for investigation and suspend access', 1, 'results.html')">Flag and suspend</button>
+    <button onclick="choose('Ignore as likely mistake', 0, 'results.html')">Ignore</button>
+  </div>
   <script src="script.js"></script>
-  <script>
-    function handleDecision(decision, score) {
-      logDecision(decision, score);
-      goToNextScenario();
-    }
-  </script>
 </body>
 </html>
