@@ -1,19 +1,3 @@
-<img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAARcAAACnCAYAAADN6cTuAAAACXBIWXMAABYlAAAWJQFJUiTwAAABUklEQVR4nO3aMQ7CMBQF0bn//6e0XYUS2EMG8oSlDXZznvbaqP2VHQDg3ACAAAAAAAACAX+U6AhogRKIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIi
-
-Here's the **full `index.html`** for your Threat Simulation game, with:
-
-- ✅ Military-style theme  
-- ✅ Embedded logo (no external image needed)  
-- ✅ Working “Start Simulation” button  
-- ✅ Beautiful, readable layout  
-- ✅ Fixed font sizes and better color contrast  
-- ✅ Linking to next pages (`scenario1.html`, etc.)
-
----
-
-### ✅ `index.html`
-
-```html
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -21,91 +5,31 @@ Here's the **full `index.html`** for your Threat Simulation game, with:
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>STACK LIMITED - Threat Simulation</title>
   <link rel="stylesheet" href="style.css" />
-  <style>
-    body {
-      margin: 0;
-      font-family: 'Segoe UI', sans-serif;
-      background: linear-gradient(to bottom, #0f0f0f, #1a1a2e);
-      color: #ffffff;
-      overflow-x: hidden;
-    }
-
-    .logo {
-      width: 100px;
-      display: block;
-      margin: 30px auto 10px;
-    }
-
-    .container {
-      text-align: center;
-      padding: 50px 20px;
-    }
-
-    h1 {
-      font-size: 2.5rem;
-      margin: 10px 0;
-      color: #00bfff;
-    }
-
-    h2 {
-      font-size: 1.4rem;
-      margin-bottom: 40px;
-      font-weight: normal;
-      color: #e0e0e0;
-    }
-
-    .start-btn {
-      background-color: #00bfff;
-      color: #000;
-      font-size: 1.1rem;
-      padding: 15px 30px;
-      border: none;
-      border-radius: 8px;
-      cursor: pointer;
-      transition: background 0.3s ease;
-    }
-
-    .start-btn:hover {
-      background-color: #009acd;
-    }
-
-    .particles {
-      position: fixed;
-      top: 0;
-      left: 0;
-      z-index: -1;
-      width: 100%;
-      height: 100%;
-      background: url('https://raw.githubusercontent.com/VincentGarreau/particles.js/master/demo/media/background.jpg') no-repeat center center/cover;
-      opacity: 0.1;
-      animation: fade 20s infinite alternate;
-    }
-
-    @keyframes fade {
-      0% { opacity: 0.1; }
-      100% { opacity: 0.25; }
-    }
-  </style>
+  <link href="https://fonts.googleapis.com/css2?family=Share+Tech+Mono&family=Orbitron:wght@500&display=swap" rel="stylesheet">
 </head>
 <body>
-
-  <!-- Floating particles background -->
-  <div class="particles"></div>
-
-  <!-- Logo embedded as base64 -->
-  <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAARcAAACnCAYAAADN6cTuAAAACXBIWXMAABYlAAAWJQFJUiTwAAABUklEQVR4nO3aMQ7CMBQF0bn//6e0XYUS2EMG8oSlDXZznvbaqP2VHQDg3ACAAAAAAAACAX+U6AhogRKIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIiIi==" alt="STACK LIMITED Logo" class="logo">
-
   <div class="container">
-    <h1>STACK LIMITED</h1>
-    <h2>Cybersecurity Threat Simulation</h2>
-    <button class="start-btn" onclick="startSimulation()">Begin Simulation</button>
+    <header>
+      <!-- WORKING MILITARY-THEME LOGO -->
+      <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/6e/United_States_Cyber_Command_seal.svg/512px-United_States_Cyber_Command_seal.svg.png"
+           alt="STACK LIMITED Logo" class="logo" />
+      <h1>Tolulope Oni</h1>
+      <h2>Cybersecurity Analyst & Web Developer</h2>
+    </header>
+
+    <main>
+      <section class="intro">
+        <h3>Welcome to the STACK LIMITED Cyber Threat Simulation</h3>
+        <p>You are a Junior Security Analyst at STACK LIMITED. Your job: investigate and respond to incoming security incidents. Can you keep the system safe?</p>
+        <button onclick="startSimulation()">Begin Simulation</button>
+      </section>
+    </main>
   </div>
 
   <script>
     function startSimulation() {
-      window.location.href = 'scenario1.html';
+      window.location.href = "scenario1.html";
     }
   </script>
-
 </body>
 </html>
