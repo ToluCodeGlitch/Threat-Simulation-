@@ -3,33 +3,22 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Threat Simulation: Cyber Ops Command</title>
-  <link rel="stylesheet" href="style.css"/>
+  <title>Threat Simulation Game</title>
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <div class="container">
-    <section id="mission-brief" class="active screen">
-      <h1>🛡 STACK LIMITED - CYBER DEFENSE DIVISION</h1>
-      <p>Welcome, Cadet. Your mission is to neutralize threats before they breach our systems. Make the right decisions. Fail, and the organization suffers.</p>
-      <button onclick="startMission()">Begin Simulation</button>
-    </section>
+  <header>
+    <img src="stack-logo.png" alt="STACK LIMITED Logo" class="logo"/>
+    <h1>STACK LIMITED - Cybersecurity Threat Simulator</h1>
+  </header>
 
-    <section id="scenario-1" class="screen">
-      <h2>⚠️ Mission 1: Phishing Email Detected</h2>
-      <p>You receive an email from 'HR Department' asking you to click a link to verify your payroll info. The link looks odd. What do you do?</p>
-      <div class="choices">
-        <button onclick="handleChoice('A')">A. Click the link to check</button>
-        <button onclick="handleChoice('B')">B. Report the email as suspicious</button>
-        <button onclick="handleChoice('C')">C. Forward it to your friend to ask if it’s legit</button>
-      </div>
+  <main class="intro-screen">
+    <section class="mission-briefing">
+      <h2>Mission Briefing</h2>
+      <p>You are a junior Cybersecurity Analyst at STACK LIMITED. Your mission is to detect, analyze, and respond to a series of real-world cyber threats. Make your choices wisely — the safety of the company depends on you.</p>
+      <button onclick="startSimulation()">Begin Simulation</button>
     </section>
-
-    <section id="feedback" class="screen">
-      <h2 id="result-title"></h2>
-      <p id="result-text"></p>
-      <button onclick="nextMission()">Proceed to Next Mission</button>
-    </section>
-  </div>
+  </main>
 
   <script src="script.js"></script>
 </body>
