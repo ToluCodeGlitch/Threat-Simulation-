@@ -1,53 +1,59 @@
-body {
+body.military-theme {
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #0a0f1e;
+  color: #f0f4f8;
   margin: 0;
   padding: 0;
-  font-family: 'Segoe UI', sans-serif;
-  background: linear-gradient(120deg, #0f2027, #203a43, #2c5364);
-  color: #f0f0f0;
-  min-height: 100vh;
+  background-image: url('https://www.transparenttextures.com/patterns/stardust.png');
   background-size: cover;
-  background-attachment: fixed;
+  background-repeat: repeat;
 }
 
 header {
   text-align: center;
   padding: 20px;
-  background-color: rgba(0,0,0,0.4);
 }
 
 .logo {
-  width: 80px;
+  width: 60px;
+  height: 60px;
   margin-bottom: 10px;
 }
 
-h1, h2 {
-  margin: 0;
+.subtitle {
+  font-size: 1.1rem;
+  color: #c0cfe4;
 }
 
-main {
+.centered {
+  text-align: center;
   padding: 40px;
-  max-width: 700px;
-  margin: auto;
-  background-color: rgba(0,0,0,0.3);
-  border-radius: 10px;
-}
-
-section {
-  margin-top: 30px;
 }
 
 button {
-  margin: 15px 10px;
-  padding: 12px 20px;
-  background-color: #1976d2;
-  color: white;
+  padding: 15px 30px;
+  margin: 15px;
+  font-size: 1rem;
   border: none;
+  background-color: #1e90ff;
+  color: white;
   border-radius: 8px;
-  font-size: 1em;
   cursor: pointer;
-  transition: background 0.3s ease;
+  transition: 0.3s;
 }
 
 button:hover {
-  background-color: #1565c0;
+  background-color: #104e8b;
+}
+
+.scenario {
+  max-width: 600px;
+  margin: auto;
+  padding: 40px;
+  text-align: center;
+}
+
+h2 {
+  font-size: 1.7rem;
+  margin-bottom: 20px;
 }
