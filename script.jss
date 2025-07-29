@@ -1,27 +1,65 @@
-function startMission() {
-  document.getElementById("mission-brief").classList.remove("active");
-  document.getElementById("scenario-1").classList.add("active");
-}
+// Load previous state if it exists
+let simulationState = {
+  currentScenario: 1,
+  decisions: [],
+  score: 0
+};
 
-function handleChoice(option) {
-  document.getElementById("scenario-1").classList.remove("active");
-  document.getElementById("feedback").classList.add("active");
-
-  const resultTitle = document.getElementById("result-title");
-  const resultText = document.getElementById("result-text");
-
-  if (option === "B") {
-    resultTitle.innerText = "✅ Mission Success";
-    resultText.innerText = "Excellent judgment. Reporting the email protects the organization and starts an internal investigation.";
-    localStorage.setItem("mission1", "success");
-  } else {
-    resultTitle.innerText = "❌ Mission Failed";
-    resultText.innerText = "That was a phishing attack. You exposed company credentials. Stack Limited's security has been compromised.";
-    localStorage.setItem("mission1", "fail");
+function loadSimulation() {
+  const saved = localStorage.getItem("simulationState");
+  if (saved) {
+    simulationState = JSON.parse(saved);
   }
 }
 
-function nextMission() {
-  // Add next mission logic or display "More Coming Soon" for now
-  alert("Next mission coming soon...");
+function startSimulation() {
+  // Reset simulation when starting fresh
+  simulationState = {
+    currentScenario: 1,
+    decisions: [],
+    score: 0
+  };
+  localStorage.setItem("simulationState", JSON.stringify(simulationState));
+  window.location.href = "scenario1.html";
+}
+
+function logDecision(decisionText, scoreImpact = 0) {
+  // Log current decision
+  simulationState.decisions.push({
+    scenario: simulationState.currentScenario,
+    decision: decisionText
+  });
+
+  simulationState.score += scoreImpact;
+  localStorage.setItem("simulationState", JSON.stringify(simulationState));
+}
+
+function goToNextScenario() {
+  simulationState.currentScenario++;
+  localStorage.setItem("simulationState", JSON.stringify(simulationState));
+  const nextPage = `scenario${simulationState.currentScenario}.html`;
+
+  // Check if the next scenario exists by attempting to fetch the page
+  fetch(nextPage)
+    .then(response => {
+      if (response.ok) {
+        window.location.href = nextPage;
+      } else {
+        window.location.href = "summary.html"; // End screen
+      }
+    })
+    .catch(error => {
+      console.error("Error loading scenario:", error);
+      window.location.href = "summary.html";
+    });
+}
+
+function getSimulationState() {
+  return simulationState;
+}
+
+// Optional: Reset simulation
+function resetSimulation() {
+  localStorage.removeItem("simulationState");
+  window.location.href = "index.html";
 }
