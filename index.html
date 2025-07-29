@@ -5,27 +5,56 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>STACK LIMITED - Threat Simulation</title>
   <link rel="stylesheet" href="style.css" />
-  <link href="https://fonts.googleapis.com/css2?family=Share+Tech+Mono&family=Orbitron:wght@500&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500&family=Share+Tech+Mono&display=swap" rel="stylesheet">
 </head>
 <body>
+  <div id="particles-js"></div>
+
   <div class="container">
     <header>
-      <!-- WORKING MILITARY-THEME LOGO -->
-      <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/6e/United_States_Cyber_Command_seal.svg/512px-United_States_Cyber_Command_seal.svg.png"
-           alt="STACK LIMITED Logo" class="logo" />
-      <h1>Tolulope Oni</h1>
-      <h2>Cybersecurity Analyst & Web Developer</h2>
+      <!-- MILITARY-CYBERSECURITY THEMED LOGO -->
+      <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a1/Emblem_of_the_United_States_Cyber_Command.svg/512px-Emblem_of_the_United_States_Cyber_Command.svg.png" 
+           alt="STACK LIMITED Logo" 
+           class="logo" />
+      <h1 class="name">Tolulope Oni</h1>
+      <h2 class="title">Cybersecurity Analyst & Web Developer</h2>
     </header>
 
     <main>
       <section class="intro">
         <h3>Welcome to the STACK LIMITED Cyber Threat Simulation</h3>
-        <p>You are a Junior Security Analyst at STACK LIMITED. Your job: investigate and respond to incoming security incidents. Can you keep the system safe?</p>
+        <p>You are a Junior Security Analyst at STACK LIMITED. Your mission: analyze incoming threats and protect the company’s digital fortress. Are you ready?</p>
         <button onclick="startSimulation()">Begin Simulation</button>
       </section>
     </main>
   </div>
 
+  <!-- PARTICLES.JS SCRIPT -->
+  <script src="https://cdn.jsdelivr.net/npm/particles.js"></script>
+  <script>
+    particlesJS("particles-js", {
+      "particles": {
+        "number": { "value": 60 },
+        "color": { "value": "#00ffff" },
+        "shape": { "type": "circle" },
+        "opacity": { "value": 0.5 },
+        "size": { "value": 3 },
+        "line_linked": {
+          "enable": true,
+          "distance": 120,
+          "color": "#00ffff",
+          "opacity": 0.4,
+          "width": 1
+        },
+        "move": { "enable": true, "speed": 1.5 }
+      },
+      "interactivity": {
+        "events": { "onhover": { "enable": true, "mode": "repulse" } }
+      }
+    });
+  </script>
+
+  <!-- NAVIGATION FUNCTION -->
   <script>
     function startSimulation() {
       window.location.href = "scenario1.html";
