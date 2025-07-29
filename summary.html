@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Simulation Summary</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>
+    <img src="stack-logo.png" alt="STACK LIMITED Logo" class="logo" />
+    <h1>Simulation Summary</h1>
+  </header>
+
+  <main>
+    <section>
+      <div id="summary"></div>
+      <button onclick="resetSimulation()">Restart Simulation</button>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+  <script>
+    const state = getSimulationState();
+    const container = document.getElementById('summary');
+    container.innerHTML = `
+      <p><strong>Score:</strong> ${state.score}</p>
+      <h3>Decisions Made:</h3>
+      <ul>
+        ${state.decisions.map(d => `<li>Scenario ${d.scenario}: ${d.decision}</li>`).join('')}
+      </ul>
+    `;
+  </script>
+</body>
+</html>
