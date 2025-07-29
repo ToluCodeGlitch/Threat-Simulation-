@@ -3,31 +3,34 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>STACK Threat Simulator</title>
-  <link rel="stylesheet" href="style.css" />
+  <title>Threat Simulation: Cyber Ops Command</title>
+  <link rel="stylesheet" href="style.css"/>
 </head>
 <body>
-  <div id="particles-js"></div>
+  <div class="container">
+    <section id="mission-brief" class="active screen">
+      <h1>🛡 STACK LIMITED - CYBER DEFENSE DIVISION</h1>
+      <p>Welcome, Cadet. Your mission is to neutralize threats before they breach our systems. Make the right decisions. Fail, and the organization suffers.</p>
+      <button onclick="startMission()">Begin Simulation</button>
+    </section>
 
-  <div id="game-container">
-    <h1>Threat Simulator: STACK LIMITED</h1>
-    <div id="scenario"></div>
-    <div id="choices"></div>
-    <div id="feedback"></div>
-    <div id="score">Score: 0</div>
+    <section id="scenario-1" class="screen">
+      <h2>⚠️ Mission 1: Phishing Email Detected</h2>
+      <p>You receive an email from 'HR Department' asking you to click a link to verify your payroll info. The link looks odd. What do you do?</p>
+      <div class="choices">
+        <button onclick="handleChoice('A')">A. Click the link to check</button>
+        <button onclick="handleChoice('B')">B. Report the email as suspicious</button>
+        <button onclick="handleChoice('C')">C. Forward it to your friend to ask if it’s legit</button>
+      </div>
+    </section>
+
+    <section id="feedback" class="screen">
+      <h2 id="result-title"></h2>
+      <p id="result-text"></p>
+      <button onclick="nextMission()">Proceed to Next Mission</button>
+    </section>
   </div>
 
-  <!-- Sound effects -->
-  <audio id="click-sound" src="sounds/click.mp3"></audio>
-  <audio id="success-sound" src="sounds/success.mp3"></audio>
-  <audio id="fail-sound" src="sounds/fail.mp3"></audio>
-
-  <script src="https://cdn.jsdelivr.net/npm/particles.js"></script>
   <script src="script.js"></script>
-  <script>
-    particlesJS.load("particles-js", "particles.json", function () {
-      console.log("particles.js config loaded");
-    });
-  </script>
 </body>
 </html>
