@@ -1,24 +1,79 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>Threat Simulation Game</title>
-  <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Threat Simulation Game - STACK LIMITED</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@600&family=Roboto&display=swap" rel="stylesheet">
+  <style>
+    body.index-page {
+      background: radial-gradient(ellipse at center, #0f1f3d 0%, #000000 100%);
+      color: #ffffff;
+      font-family: 'Roboto', sans-serif;
+      text-align: center;
+      padding: 40px;
+    }
+
+    .logo {
+      width: 120px;
+      margin-bottom: 20px;
+    }
+
+    .main-title {
+      font-family: 'Orbitron', sans-serif;
+      font-size: 2.5rem;
+      margin-bottom: 10px;
+    }
+
+    .subtitle {
+      font-size: 1.1rem;
+      margin-bottom: 30px;
+      color: #cbd6f6;
+      max-width: 600px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .start-button {
+      padding: 15px 30px;
+      font-size: 1rem;
+      font-weight: bold;
+      background-color: #007bff;
+      color: #fff;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    .start-button:hover {
+      background-color: #0056b3;
+    }
+  </style>
 </head>
-<body>
-  <div id="particles-js"></div>
-  <header class="logo">
-    <img src="logo.png" alt="STACK LIMITED Logo">
-  </header>
-  <main class="container">
-    <h1>STACK LIMITED THREAT SIMULATOR</h1>
-    <p>Train like a real Cybersecurity Analyst. Respond to threats. Make decisions. Save the network.</p>
-    <button onclick="startSimulation()">Begin Simulation</button>
-  </main>
-  <script src="script.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/particles.js"></script>
+<body class="index-page">
+  <div class="container">
+
+    <!-- Embedded Logo Image -->
+    <img
+      src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAKAAAABgCAYAAABsD9EjAAAACXBIWXMAAAsTAAALEwEAmpwYAAABQElEQVR4nO3bMQEAAAjDMO5fNHI65QgBFZTdfQoAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgIXGdQABFhWTQgAAAABJRU5ErkJggg=="
+      alt="STACK LIMITED Logo"
+      class="logo"
+    />
+
+    <!-- Title -->
+    <h1 class="main-title">Threat Simulation Training</h1>
+    <p class="subtitle">You are now entering a high-risk environment. Your decisions will determine the fate of your organization.</p>
+
+    <!-- Start Button -->
+    <button onclick="startSimulation()" class="start-button">Begin Simulation</button>
+  </div>
+
   <script>
-    particlesJS.load('particles-js', 'particles.json');
+    function startSimulation() {
+      window.location.href = "scenario1.html";
+    }
   </script>
 </body>
 </html>
