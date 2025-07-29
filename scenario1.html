@@ -1,32 +1,18 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Scenario 1 - Suspicious Email</title>
+  <title>Scenario 1 - Phishing Email</title>
   <link rel="stylesheet" href="style.css" />
 </head>
-<body>
-  <header>
-    <img src="stack-logo.png" alt="STACK LIMITED Logo" class="logo" />
-    <h1>Scenario 1: Suspicious Email</h1>
-  </header>
-
-  <main>
-    <section>
-      <p>You receive a report from HR. An employee clicked a strange link in an email claiming to be from the IT department. What do you do?</p>
-
-      <button onclick="handleDecision('Quarantine the machine and notify IT', 10)">Quarantine and Notify</button>
-      <button onclick="handleDecision('Ignore and assume it’s harmless', -5)">Ignore</button>
-    </section>
-  </main>
-
+<body class="military-theme">
+  <div class="scenario">
+    <h2>Scenario 1: Phishing Email Detected</h2>
+    <p>A suspicious email was sent to multiple staff members with a fake login page.</p>
+    <p>What will you do?</p>
+    <button onclick="choose('Report to IT and quarantine email', 1, 'scenario2.html')">Report to IT and quarantine</button>
+    <button onclick="choose('Ignore and delete', 0, 'scenario2.html')">Ignore and delete</button>
+  </div>
   <script src="script.js"></script>
-  <script>
-    function handleDecision(decision, score) {
-      logDecision(decision, score);
-      goToNextScenario();
-    }
-  </script>
 </body>
 </html>
