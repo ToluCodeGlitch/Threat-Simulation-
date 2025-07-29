@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Scenario 2 - Ransomware Detected</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>
+    <img src="stack-logo.png" alt="STACK LIMITED Logo" class="logo" />
+    <h1>Scenario 2: Ransomware Detected</h1>
+  </header>
+
+  <main>
+    <section>
+      <p>Multiple users report encrypted files and ransom notes on their desktops. What’s your next action?</p>
+
+      <button onclick="handleDecision('Isolate affected machines and initiate incident response', 10)">Isolate and Respond</button>
+      <button onclick="handleDecision('Pay the ransom immediately', -10)">Pay the Ransom</button>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+  <script>
+    function handleDecision(decision, score) {
+      logDecision(decision, score);
+      goToNextScenario();
+    }
+  </script>
+</body>
+</html>
